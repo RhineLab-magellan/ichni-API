@@ -10,6 +10,7 @@ using std::fstream;
 using std::ifstream;
 using std::ios;
 
+#define _CRLF "\r\n"
 
 class API
 {
@@ -23,7 +24,8 @@ public:
     /// 生成一个游戏元素文件夹（Element Folder），功能基本等于Track Group，在下一个相同函数执行之前，所有的游戏元素（主要是Track）都会被归入改函数生成的文件夹中
     /// </summary>
 	void GenerateElementFolder(){
-
+        _Dat += "GenerateElementFolder();";
+        _Dat += _CRLF;
 	}
 
     /// <summary>
@@ -33,7 +35,8 @@ public:
     /// <param name="viewAngleOrSize: 如果是透视相机，设定其拍摄角度(0,180)；如果是正交相机，设定其视口大小(0,正无穷)"></param>
     /// <returns></returns>
     UReturn GenerateGameCamera(CameraViewType cameraViewType, float viewAngleOrSize){
-        
+        _Dat += "GenerateElementFolder();";
+        _Dat += _CRLF;
     }
 
     /// <summary>

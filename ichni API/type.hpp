@@ -3,8 +3,13 @@
 //各种返回值类型
 using UReturn = void;
 
-//浮点数
-using FlexibleFloat = float;
+struct FlexibleFloat {
+
+};
+struct AnimatedFloat {
+
+};
+
 
 //new EaseCurve(EaseCurveType)
 enum class EaseCurveType {
