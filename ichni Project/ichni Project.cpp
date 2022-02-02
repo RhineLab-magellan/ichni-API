@@ -1,5 +1,5 @@
 ﻿#include <iostream>
-
+#include "../ichni API/API.hpp"
 
 //main函数，程序从这里开始执行
 int main(){
