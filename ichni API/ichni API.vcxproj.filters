@@ -12,5 +12,8 @@
   <ItemGroup>
     <ClInclude Include="API.hpp" />
     <ClInclude Include="type.hpp" />
+    <ClInclude Include="FlexibleFloat.hpp" />
+    <ClInclude Include="Vector3List.h" />
+    <ClInclude Include="FlexibleColorModifierUnitList.hpp" />
   </ItemGroup>
 </Project>

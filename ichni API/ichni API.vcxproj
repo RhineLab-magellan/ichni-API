@@ -23,7 +23,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="API.hpp" />
+    <ClInclude Include="FlexibleColorModifierUnitList.hpp" />
+    <ClInclude Include="FlexibleFloat.hpp" />
     <ClInclude Include="type.hpp" />
+    <ClInclude Include="Vector3List.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
