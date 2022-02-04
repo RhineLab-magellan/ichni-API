@@ -13,7 +13,7 @@ using std::cout;
 using std::endl;
 
 
-using _EaseCurve = string;
+typedef string _EaseCurve;
 using _TrackSpaceType = string;
 using _TrackMoveType = string;
 using _TrackCauculateType = string;
@@ -28,12 +28,14 @@ namespace EaseCurveType {
 };
 //这里将他们俩合并了
 namespace EaseCurve = EaseCurveType;
+namespace ECT = EaseCurveType;
 
 struct AnimatedFloat {
     float startValue, endValue;//起止值
     float startTime, endTime;//起止时间
     _EaseCurve animationCurve;//动画曲线
 };
+using AF = AnimatedFloat;
 
 //new Vector3(x,y,z)
 struct Vector3
@@ -42,6 +44,8 @@ struct Vector3
     float y;
     float z;
 };
+using V3 = Vector3;
+
 
 //Track.TrackMoveType
 namespace TrackMoveType{
@@ -49,12 +53,14 @@ namespace TrackMoveType{
     string quiescent = "Track.TrackMoveType.quiescent";//静态轨道，Note从轨道组的尾端（最后一个轨道的最后位置）前往头端（第一个轨道的起始位置），Head和Tail都处于起始位置并且默认不会移动
     string movable = "Track.TrackMoveType.movable";//动态轨道，Head和Tail默认以设定参数向前移动
 };
+namespace TMT = TrackMoveType;
 
 //Track.TrackCauculateType
 namespace TrackCauculateType {
     string distance = "Track.TrackCauculateType.distance";//使用空间距离计算，对应visibleTrackDistance
     string time = "Track.TrackCauculateType.time";//使用时间计算，对应visibleTrackTime
 };
+namespace TCT = TrackCauculateType;
 
 //Track.TrackSpaceType
 namespace TrackSpaceType {
@@ -62,11 +68,13 @@ namespace TrackSpaceType {
     string BSpline = "Track.TrackSpaceType.BSpline";
     string Linear = "Track.TrackSpaceType.Linear";
 };
+namespace TST = TrackSpaceType;
 
 //GameCamera.CameraViewType
 namespace CameraViewType{
     string perspective = "GameCamera.CameraViewType.perspective";//透视相机
     string orthographic = "GameCamera.CameraViewType.orthographic";//正交相机
 };
+namespace CVT = CameraViewType;
 
 #define _CRLF "\r\n"

@@ -15,12 +15,7 @@ using std::to_string;
 
 class FlexibleColorModifierUnitList {
 public:
-	FlexibleColorModifierUnitList(){}
-	~FlexibleColorModifierUnitList() {}
-
-public:
-
-	void startAdd(FlexibleColorModifierUnit af) {
+	FlexibleColorModifierUnitList(FlexibleColorModifierUnit af) {
 		_Dat += "new List<FlexibleColorModifierUnit>(){\r\n"
 			"new FlexibleColorModifierUnit("
 			+ af.start.data() + ","
@@ -36,6 +31,9 @@ public:
 			;
 		_Dat += _CRLF;
 	}
+	~FlexibleColorModifierUnitList() {}
+
+public:
 
 	void add(FlexibleColorModifierUnit af) {
 		_Dat += ",new FlexibleColorModifierUnit("
@@ -53,7 +51,7 @@ public:
 		_Dat += _CRLF;
 	}
 
-	void FlexibleColorModifierUnit() {
+	void endAdd() {
 		_Dat += "});";
 		_Dat += _CRLF;
 	}
@@ -66,3 +64,6 @@ public:
 private:
 	string _Dat;
 };
+
+
+using FCMUL = FlexibleColorModifierUnitList;

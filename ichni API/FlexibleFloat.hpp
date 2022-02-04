@@ -16,10 +16,7 @@ using std::to_string;
 
 class FlexibleFloat {
 public:
-	FlexibleFloat():_Dat("") {}
-	~FlexibleFloat(){}
-public:
-	void startAdd(AnimatedFloat af) {
+	FlexibleFloat(AnimatedFloat af):_Dat("") {
 		_Dat += "new FlexibleFloat("
 			"new List<AnimatedFloat>(){"
 			"\r\nnew AnimatedFloat("
@@ -35,7 +32,8 @@ public:
 			+ ")";
 		_Dat += _CRLF;
 	}
-
+	~FlexibleFloat(){}
+public:
 	void add(AnimatedFloat af) {
 		_Dat += ",new AnimatedFloat("
 			+ to_string(af.startValue)
@@ -76,3 +74,6 @@ struct FlexibleColorModifierUnit
 	FlexibleFloat blend;
 	FlexibleFloat position;
 };
+
+using FF = FlexibleFloat;
+using FCMU =FlexibleColorModifierUnit;

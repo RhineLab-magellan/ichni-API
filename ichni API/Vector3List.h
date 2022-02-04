@@ -13,7 +13,7 @@ using std::endl;
 using std::string;
 using std::to_string;
 
-//new List<Vector3>(){new Vector3(0,0,0),new Vector3(5,0,0),new Vector3(5,5,-2)}
+//new List<Vector3>(){new Vector3(0,0,0)...}
 class Vector3List {
 public:
 	Vector3List() :_Dat("") {}
